@@ -14,15 +14,15 @@ def insert_at_tail(list,value):
     new_node=node(value)
     
     if list.is_empty():
-         list.header=new_node
-    
+        list.header=new_node
+        return
     temp=list.get_head()
 
     while temp.next_element:           
            temp=temp.next_element
   
     temp.next_element=new_node
-
+    return
 
 def search(list,value):
 
@@ -55,7 +55,7 @@ def delete_value(list,value):
     if current.data==value:
         delete_at_head(list,value)
 
-    while current.next_element:
+    while current.next_element is not None:
 
         if current.data==value:
             prev.next_element=current.next_element
@@ -72,17 +72,19 @@ def get_count(list):
     while tmp is not None:
         i=i+1
         tmp=tmp.next_element
-
-
+    
     return i
 
                    
 list=List()
 
+
 for i in range(10):
     insert_at_tail(list,i)
 
+print(list.get_head().data)
 print(get_count(list))
+
 
 
 
