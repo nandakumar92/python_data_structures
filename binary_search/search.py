@@ -26,3 +26,13 @@ class search:
         else:
             self.root=Node(val)
             return
+
+    ## search iterative
+    def search(self,val):
+        return self.root.search(val)
+    
+    
+    ##search recursive
+    def search_recursive(self,val):
+
+        return self.root.search_recursive(val)

@@ -19,3 +19,6 @@ for _ in range(15):
 print(bst.root.val)
 print(bst.root.leftChild.val)
 print(bst.root.rightChild.val)
+
+
+

@@ -50,6 +50,57 @@ class Node:
                 self.rightChild=Node(val)
                 return
 
+
+    ##search iterative
+    def search(self,val):
+
+        current=self
+
+        while current:
+            if val<self.val:
+
+                current=current.leftChild
+
+            elif val>self.val:
+
+                current=current.rightChild
+
+            else:
+
+                return True
+
+        return False
+
+
+
+    ### search recursive
+    def search_recursive(self,val):
+        if val<self.val:
+
+            if self.leftChild:
+                
+                return self.leftChild.search_recursive(val)
+
+            else: 
+                return False
+
+
+        elif val>self.val:
+
+            if self.rightChild:
+
+                return self.rightChild.search_recursive(val)
+
+            else: 
+                return False
+
+        else:
+
+            return True
+
+
+        
+
             
 
 
