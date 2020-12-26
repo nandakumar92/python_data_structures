@@ -101,7 +101,7 @@ class Node:
                 while(current.leftChild is not None):
                     current = current.leftChild
                 self.val = current.val
-                self.rightChild = self.rightChild.delete(current.val)
+                self.rightChild=self.rightChild.delete(current.val)
 
         return self
 
