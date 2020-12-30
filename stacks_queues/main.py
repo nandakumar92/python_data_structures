@@ -25,7 +25,7 @@ class queue:
     def __init__(self):
         self.queue=[]
   
-    def is_emtpy(self):
+    def is_empty(self):
         if len(self.queue)==0:
             return True
         else:
@@ -39,12 +39,6 @@ class queue:
     
     def enqueue(self,val):
         self.queue.append(val)
-
-
-    
-
-
-
 
 s=stack()
 print(s.is_empty())
